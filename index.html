@@ -188,13 +188,12 @@
 </head>
 <body>
     <header>
-        <h1>Abdel Rahman Awawdeh,  EIT</h1>
+        <h1>Abdel Rahman Awawdeh, EIT</h1>
         <p class="subtitle" id="typewriter"> Civil Engineering PhD Candidate | Machine Learning Enthusiast</p>
         <p>Email: abdel.resume96@gmail.com</p>
         <p>
             <a href="https://www.linkedin.com/in/awawdah-abdel-rahman/" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;">
-                
             </a>
         </p>
     </header>
@@ -203,7 +202,6 @@
             <h2>Professional Summary</h2>
             <p class="typewriter-card">Civil Engineering PhD candidate with expertise in geotechnical engineering, machine learning, and remote sensing. Experienced in data analysis, programming, and structural design. Committed to advancing groundwater prediction, hydrological modeling, and sustainable engineering solutions.</p>
         </div>
-
 
         <div class="card">
             <h2>Work Authorization</h2>
@@ -216,21 +214,18 @@
                 <div>
                     <p class="degree typewriter-card">PhD in Civil Engineering (Candidate, expected December 2024)</p>
                     <p class="university typewriter-card">University of Mississippi, Oxford, MS</p>
-                
                 </div>
             </div>
             <div class="timeline-item">
                 <div>
                     <p class="degree typewriter-card">Master of Engineering, Civil Engineering (July 2020)</p>
                     <p class="university typewriter-card">University of the Pacific, Stockton, CA</p>
-               
                 </div>
             </div>
             <div class="timeline-item">
                 <div>
                     <p class="degree typewriter-card">Bachelor of Science, Civil Engineering (August 2018)</p>
                     <p class="university typewriter-card">Jordan University of Science and Technology, Jordan</p>
-                
                 </div>
             </div>
         </div>
@@ -243,7 +238,6 @@
                 <ul>
                     <li class="typewriter-card">Contributed to research projects focused on groundwater prediction and remote sensing.</li>
                     <li class="typewriter-card">Helped in some civil engineering courses, receiving positive student and professors feedback.</li>
-                    
                 </ul>
             </div>
             <div>
@@ -314,75 +308,81 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            gsap.registerPlugin(ScrollTrigger);
+        window.onload = function() {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
 
-            gsap.from("header", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
+                gsap.from("header", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
 
-            gsap.utils.toArray(".card").forEach((card, i) => {
-                gsap.from(card, {
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top bottom-=100",
-                        toggleActions: "play none none reverse"
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.8,
-                    ease: "power3.out",
-                    delay: i * 0.1
+                gsap.utils.toArray(".card").forEach((card, i) => {
+                    gsap.from(card, {
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top bottom-=100",
+                            toggleActions: "play none none reverse"
+                        },
+                        opacity: 0,
+                        y: 50,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        delay: i * 0.1
+                    });
                 });
-            });
 
-            gsap.utils.toArray(".timeline-item").forEach((item, i) => {
-                gsap.from(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top bottom-=100",
-                        toggleActions: "play none none reverse"
-                    },
-                    opacity: 0,
-                    x: i % 2 === 0 ? -50 : 50,
-                    duration: 0.8,
-                    ease: "power3.out"
+                gsap.utils.toArray(".timeline-item").forEach((item, i) => {
+                    gsap.from(item, {
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top bottom-=100",
+                            toggleActions: "play none none reverse"
+                        },
+                        opacity: 0,
+                        x: i % 2 === 0 ? -50 : 50,
+                        duration: 0.8,
+                        ease: "power3.out"
+                    });
                 });
-            });
 
-            gsap.utils.toArray(".skills-list li").forEach((skill, i) => {
-                gsap.from(skill, {
-                    scrollTrigger: {
-                        trigger: ".skills-list",
-                        start: "top bottom-=100",
-                        toggleActions: "play none none reverse"
-                    },
-                    opacity: 0,
-                    scale: 0.5,
-                    duration: 0.5,
-                    ease: "back.out(1.7)",
-                    delay: i * 0.05
+                gsap.utils.toArray(".skills-list li").forEach((skill, i) => {
+                    gsap.from(skill, {
+                        scrollTrigger: {
+                            trigger: ".skills-list",
+                            start: "top bottom-=100",
+                            toggleActions: "play none none reverse"
+                        },
+                        opacity: 0,
+                        scale: 0.5,
+                        duration: 0.5,
+                        ease: "back.out(1.7)",
+                        delay: i * 0.05
+                    });
                 });
-            });
+            } else {
+                console.error('GSAP or ScrollTrigger is not loaded correctly.');
+            }
 
             // Typewriter effect for the subtitle
             const typewriterElement = document.getElementById('typewriter');
-            const typewriter = new Typewriter(typewriterElement, {
-                loop: true,
-                delay: 75,
-            });
+            if (typewriterElement && typeof Typewriter !== 'undefined') {
+                const typewriter = new Typewriter(typewriterElement, {
+                    loop: true,
+                    delay: 75,
+                });
 
-            typewriter
-                .typeString('Civil Engineering PhD Candidate')
-                .pauseFor(1000)
-                .deleteAll()
-                .typeString('Machine Learning Enthusiast')
-                .pauseFor(1000)
-                .deleteAll()
-                .typeString('Geotechnical Engineering Specialist')
-                .pauseFor(1000)
-                .start();
-
-            });
-            </script>
+                typewriter
+                    .typeString('Civil Engineering PhD Candidate ')
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .typeString('Machine Learning Enthusiast')
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .typeString('Geotechnical Engineering Specialist')
+                    .pauseFor(1000)
+                    .start();
+            } else {
+                console.error('Typewriter effect is not loaded correctly.');
+            }
+        };
+    </script>
 </body>
-
 </html>
