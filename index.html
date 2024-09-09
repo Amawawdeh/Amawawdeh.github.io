@@ -19,7 +19,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--background-color);
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
             color: var(--text-color);
             line-height: 1.6;
             margin: 0;
@@ -184,72 +184,47 @@
             .timeline-item::after { left: 21px; }
             .timeline-item:nth-child(even) { left: 0%; }
         }
-
-        #particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            opacity: 0.3;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .floating-icon {
-            font-size: 2em;
-            color: var(--accent-color);
-            animation: float 3s ease-in-out infinite;
-            position: absolute;
-            opacity: 0.7;
-        }
     </style>
 </head>
 <body>
-    <div id="particles"></div>
     <header>
         <h1>Abdel Rahman Awawdeh</h1>
         <p class="subtitle" id="typewriter"> Civil Engineering PhD Candidate | Machine Learning Enthusiast</p>
+        <p>Email: abdel.resume96@gmail.com</p>
     </header>
     <div class="container">
         <div class="card">
             <h2>Professional Summary</h2>
-            <p>Civil Engineering PhD candidate with expertise in geotechnical engineering, machine learning, and remote sensing. Experienced in data analysis, programming, and structural design. Committed to advancing groundwater prediction, hydrological modeling, and sustainable engineering solutions.</p>
+            <p class="typewriter-card">Civil Engineering PhD candidate with expertise in geotechnical engineering, machine learning, and remote sensing. Experienced in data analysis, programming, and structural design. Committed to advancing groundwater prediction, hydrological modeling, and sustainable engineering solutions.</p>
+        </div>
+
+
+        <div class="card">
+            <h2>Work Authorization</h2>
+            <p>Authorized to work in the US</p>
         </div>
 
         <div class="timeline">
             <div class="timeline-item">
                 <h2>Education</h2>
                 <div>
-                    <p class="degree">PhD in Civil Engineering (Candidate, expected December 2024)</p>
-                    <p class="university">University of Mississippi, Oxford, MS</p>
-                    <p>GPA: 4.00</p>
+                    <p class="degree typewriter-card">PhD in Civil Engineering (Candidate, expected December 2024)</p>
+                    <p class="university typewriter-card">University of Mississippi, Oxford, MS</p>
+                
                 </div>
             </div>
             <div class="timeline-item">
                 <div>
-                    <p class="degree">Master of Engineering, Civil Engineering (July 2020)</p>
-                    <p class="university">University of the Pacific, Stockton, CA</p>
-                    <p>GPA: 3.77</p>
+                    <p class="degree typewriter-card">Master of Engineering, Civil Engineering (July 2020)</p>
+                    <p class="university typewriter-card">University of the Pacific, Stockton, CA</p>
+               
                 </div>
             </div>
             <div class="timeline-item">
                 <div>
-                    <p class="degree">Bachelor of Science, Civil Engineering (August 2018)</p>
-                    <p class="university">Jordan University of Science and Technology, Jordan</p>
-                    <p>GPA: 3.81 (Ranked in Top 5%)</p>
+                    <p class="degree typewriter-card">Bachelor of Science, Civil Engineering (August 2018)</p>
+                    <p class="university typewriter-card">Jordan University of Science and Technology, Jordan</p>
+                
                 </div>
             </div>
         </div>
@@ -257,22 +232,31 @@
         <div class="card">
             <h2>Work Experience</h2>
             <div>
-                <p class="job-title">Teaching/Research Assistant</p>
-                <p class="company">University of Mississippi, Oxford, MS | January 2021 - Present</p>
+                <p class="job-title typewriter-card">Teaching/Research Assistant</p>
+                <p class="company typewriter-card">University of Mississippi, Oxford, MS | January 2021 - Present</p>
                 <ul>
-                    <li>Contributed to research projects focused on groundwater prediction and remote sensing.</li>
-                    <li>Instructed undergraduate civil engineering courses, receiving positive student feedback.</li>
-                    <li>Collaborated with faculty on hydrological modeling and environmental monitoring projects.</li>
+                    <li class="typewriter-card">Contributed to research projects focused on groundwater prediction and remote sensing.</li>
+                    <li class="typewriter-card">Helped in some civil engineering courses, receiving positive student and professors feedback.</li>
+                    
                 </ul>
             </div>
             <div>
-                <p class="job-title">Civil Engineer</p>
-                <p class="company">Shatec Engineering Consultants, LLC, CA, USA | October 2020 - January 2021</p>
+                <p class="job-title typewriter-card">Civil Engineer</p>
+                <p class="company typewriter-card">Shatec Engineering Consultants, LLC, CA, USA | October 2020 - January 2021</p>
                 <ul>
-                    <li>Performed seepage analysis using SEEP/W software, leading to a 15% reduction in water leakage.</li>
-                    <li>Conducted soil settlement analysis, improving project timelines by 10%.</li>
-                    <li>Generated predictive reports for peak temperatures in cast-in-place concrete piling using advanced software.</li>
-                    <li>Evaluated traffic accidents from an engineering perspective, contributing to safer road designs.</li>
+                    <li class="typewriter-card">Performed seepage analysis using SEEP/W software, leading to a 15% reduction in water leakage.</li>
+                    <li class="typewriter-card">Conducted soil settlement analysis, and submitted a detailed report.</li>
+                    <li class="typewriter-card">Generated predictive reports for peak temperatures in cast-in-place concrete piling using advanced software.</li>
+                    <li class="typewriter-card">Evaluated traffic accidents from an engineering perspective, contributing to safer road designs.</li>
+                </ul>
+            </div>
+            <div>
+                <p class="job-title typewriter-card">Civil Engineer, Intern</p>
+                <p class="company typewriter-card">LEEWAN Company, Irbid, Jordan | June 2018 - August 2018</p>
+                <ul>
+                    <li class="typewriter-card">Evaluated site engineering plans and ensured field implementation by comparing engineering plans with completed work.</li>
+                    <li class="typewriter-card">Supervised field work by daily directing staff for what to do with work.</li>
+                    <li class="typewriter-card">Wrote weekly detailed progress reports for what had been done.</li>
                 </ul>
             </div>
         </div>
@@ -302,106 +286,97 @@
         <div class="card">
             <h2>Publications and Presentations</h2>
             <ol>
-                <li>Sensors. 2023; 23(14):6428.</li>
-                <li>Journal of Composites for Construction. Forthcoming.</li>
+                <li class="typewriter-card">
+                    Ghaffari Z, Easson G, Yarbrough LD, Awawdeh AR, Jahan MN, Ellepola A. 
+                    <a href="https://doi.org/10.3390/s23146428" target="_blank">
+                        Using Downscaled GRACE Mascon Data to Assess Total Water Storage in Mississippi Alluvial Plain Aquifer. Sensors. 2023; 23(14):6428.
+                    </a>
+                </li>
+                <li class="typewriter-card">
+                    Alshannaq AA, Awawdeh AR. 
+                    <a href="https://doi.org/10.1061/JCCOF2/CCENG-4483" target="_blank">
+                        Implementation of Machine Learning in Predicting Pin-Bearing Strength of Aged and Non-Aged Pultruded GFRP Composites. Journal of Composites for Construction. Forthcoming.
+                    </a>
+                </li>
             </ol>
             <ul>
-                <li>"Advancing Groundwater Prediction in the Mississippi Delta: Integrating Downscaled GRACE Data and Artificial Neural Networks" - AGU Fall Meeting, San Francisco, CA, December 2023</li>
-                <li>"Scaling down GRACE data for smaller regions" - Mississippi Water Resources Conference, Starkville, MS, March 2023</li>
-                <li>"Downscaling GRACE Equivalent Water Thickness Data for Mississippi Using Neural Nets" - Mississippi Water Resources Conference, Starkville, MS, April 2022</li>
+                <li class="typewriter-card">"Advancing Groundwater Prediction in the Mississippi Delta: Integrating Downscaled GRACE Data and Artificial Neural Networks" - AGU Fall Meeting, San Francisco, CA, December 2023</li>
+                <li class="typewriter-card">"Scaling down GRACE data for smaller regions" - Mississippi Water Resources Conference, Starkville, MS, March 2023</li>
+                <li class="typewriter-card">"Downscaling GRACE Equivalent Water Thickness Data for Mississippi Using Neural Nets" - Mississippi Water Resources Conference, Starkville, MS, April 2022</li>
             </ul>
         </div>
     </div>
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from("header", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
+            gsap.from("header", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
 
-        gsap.utils.toArray(".card").forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top bottom-=100",
-                    toggleActions: "play none none reverse"
-                },
-                opacity: 0,
-                y: 50,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: i * 0.1
+            gsap.utils.toArray(".card").forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top bottom-=100",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: i * 0.1
+                });
             });
-        });
 
-        gsap.utils.toArray(".timeline-item").forEach((item, i) => {
-            gsap.from(item, {
-                scrollTrigger: {
-                    trigger: item,
-                    start: "top bottom-=100",
-                    toggleActions: "play none none reverse"
-                },
-                opacity: 0,
-                x: i % 2 === 0 ? -50 : 50,
-                duration: 0.8,
-                ease: "power3.out"
+            gsap.utils.toArray(".timeline-item").forEach((item, i) => {
+                gsap.from(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top bottom-=100",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 0,
+                    x: i % 2 === 0 ? -50 : 50,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
             });
-        });
 
-        gsap.utils.toArray(".skills-list li").forEach((skill, i) => {
-            gsap.from(skill, {
-                scrollTrigger: {
-                    trigger: ".skills-list",
-                    start: "top bottom-=100",
-                    toggleActions: "play none none reverse"
-                },
-                opacity: 0,
-                scale: 0.5,
-                duration: 0.5,
-                ease: "back.out(1.7)",
-                delay: i * 0.05
+            gsap.utils.toArray(".skills-list li").forEach((skill, i) => {
+                gsap.from(skill, {
+                    scrollTrigger: {
+                        trigger: ".skills-list",
+                        start: "top bottom-=100",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 0,
+                    scale: 0.5,
+                    duration: 0.5,
+                    ease: "back.out(1.7)",
+                    delay: i * 0.05
+                });
             });
-        });
 
-        // Particle animation
-        const particles = document.getElementById('particles');
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            particle.style.width = `${Math.random() * 5 + 2}px`;
-            particle.style.height = particle.style.width;
-            particle.style.top = `${Math.random() * 100}%`;
-            particle.style.left = `${Math.random() * 100}%`;
-            gsap.to(particle, {
-                y: `random(-100, 100)`,
-                x: `random(-100, 100)`,
-                opacity: `random(0.1, 0.3)`,
-                duration: `random(10, 20)`,
-                repeat: -1,
-                yoyo: true,
-                ease: "none"
+            // Typewriter effect for the subtitle
+            const typewriterElement = document.getElementById('typewriter');
+            const typewriter = new Typewriter(typewriterElement, {
+                loop: true,
+                delay: 75,
             });
-            particles.appendChild(particle);
-        }
 
-        // Typewriter effect
-        const typewriterElement = document.getElementById('typewriter');
-        const typewriter = new Typewriter(typewriterElement, {
-            loop: true,
-            delay: 75,
-        });
+            typewriter
+                .typeString('Civil Engineering PhD Candidate')
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString('Machine Learning Enthusiast')
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString('Geotechnical Engineering Specialist')
+                .pauseFor(1000)
+                .start();
 
-        typewriter
-            .typeString('Civil Engineering PhD Candidate')
-            .pauseFor(1000)
-            .deleteAll()
-            .typeString('Machine Learning Enthusiast')
-            .pauseFor(1000)
-            .deleteAll()
-            .typeString('Geotechnical Engineering Specialist')
-            .pauseFor(1000)
-            .start();
-
-
-    </script>
+            });
+            </script>
 </body>
+
 </html>
