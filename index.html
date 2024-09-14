@@ -1,166 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdel Rahman Awawdeh - Civil Engineering PhD Candidate</title>
+    <meta name="description" content="Civil Engineering PhD candidate specializing in geotechnical engineering, machine learning, and remote sensing.">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Civil Engineering, PhD Candidate, Machine Learning, Geotechnical Engineering, Remote Sensing">
+    <meta name="author" content="Abdel Rahman Awawdeh">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Abdel Rahman Awawdeh - Civil Engineering PhD Candidate">
+    <meta property="og:description" content="Expertise in geotechnical engineering, machine learning, and remote sensing.">
+    <meta property="og:image" content="path_to_image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link rel="icon" href="path_to_favicon.ico" type="image/x-icon">
+
+    <!-- Styles -->
     <style>
-        :root {
-            --primary-color: #003366;
-            --secondary-color: #2C7DB1;
-            --accent-color: #FF6B6B;
-            --background-color: #F9F9F9;
-            --text-color: #333333;
+        /* Reset and Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-            color: var(--text-color);
+            color: #333;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 40px;
+            padding: 0 2rem;
         }
 
-        .subtitle .Typewriter__cursor {
-            color: var(--accent-color);
-        }
-
+        /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 60px 0;
+            background-color: #0a4275;
+            color: #fff;
+            padding: 2rem 0;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            margin-bottom: 40px;
         }
 
-        h1 {
+        header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.8;
+        header .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            font-size: 2.2em;
-            margin-top: 50px;
-            margin-bottom: 30px;
-            position: relative;
+        header .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent-color);
-            margin-top: 10px;
+        header .social-links img {
+            width: 24px;
+            height: 24px;
         }
 
-        .card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .job-title, .degree {
-            font-weight: bold;
-            color: var(--secondary-color);
-            font-size: 1.3em;
-        }
-
-        .company, .university {
-            font-style: italic;
-            color: #666666;
-            margin-bottom: 15px;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .skills-list li {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 15px;
+        .download-button {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
             border-radius: 25px;
-            list-style-type: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            cursor: pointer;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
-        .skills-list li:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
-            background-color: var(--secondary-color);
+        .download-button:hover {
+            background-color: #ff4757;
         }
 
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section.bg-light {
+            background-color: #f4f4f4;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            text-align: center;
+        }
+
+        .section h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #0a4275;
+            display: block;
+            margin: 0.5rem auto 0;
+        }
+
+        /* Timeline */
         .timeline {
             position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 2rem 0;
         }
 
-        .timeline::after {
+        .timeline::before {
             content: '';
             position: absolute;
-            width: 3px;
-            background-color: var(--primary-color);
+            left: 50%;
             top: 0;
             bottom: 0;
-            left: 50%;
-            margin-left: -1px;
+            width: 2px;
+            background-color: #ddd;
         }
 
         .timeline-item {
-            padding: 20px 40px;
             position: relative;
-            background-color: inherit;
-            width: 50%;
-            box-sizing: border-box;
+            width: 45%;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 2rem;
         }
 
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--accent-color);
-            border: 4px solid var(--primary-color);
-            top: 20px;
-            border-radius: 50%;
-            z-index: 1;
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item h3 span {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .timeline-item p.institution {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 1rem;
         }
 
         .timeline-item:nth-child(odd) {
@@ -168,221 +165,303 @@
         }
 
         .timeline-item:nth-child(even) {
-            left: 50%;
+            left: 55%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -7px;
+            width: 15px;
+            height: 15px;
+            background-color: #0a4275;
+            border: 3px solid #fff;
+            border-radius: 50%;
         }
 
         .timeline-item:nth-child(even)::after {
-            left: -10px;
+            left: -7px;
         }
 
+        /* Experience */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item p.company {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skill-category {
+            flex: 1 1 45%;
+            margin-bottom: 2rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-category ul {
+            list-style-type: none;
+        }
+
+        .skill-category ul li {
+            background-color: #0a4275;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.25rem 0.25rem 0 0;
+        }
+
+        /* Publications and Presentations */
+        .publications, .presentations {
+            margin-bottom: 2rem;
+        }
+
+        .publications h3, .presentations h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .publications ul, .presentations ul {
+            list-style-type: none;
+        }
+
+        .publications ul li, .presentations ul li {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a4275;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            h2 { font-size: 1.8em; }
-            .container { padding: 20px; }
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-item::after { left: 21px; }
-            .timeline-item:nth-child(even) { left: 0%; }
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 50px;
+            }
+
+            .timeline-item::after {
+                left: 13px !important;
+            }
+
+            .skills {
+                flex-direction: column;
+            }
+
+            .skill-category {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Abdel Rahman Awawdeh, EIT</h1>
-        <p class="subtitle" id="typewriter"> Civil Engineering PhD Candidate | Machine Learning Enthusiast</p>
-        <p>Email: abdel.resume96@gmail.com</p>
-        <p>
-            <a href="https://www.linkedin.com/in/awawdah-abdel-rahman/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;">
+        <div class="container">
+            <h1>Abdel Rahman Awawdeh, EIT</h1>
+            <p class="subtitle">Civil Engineering PhD Candidate | Machine Learning Enthusiast</p>
+            <p>Email: <a href="mailto:abdel.resume96@gmail.com">abdel.resume96@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/awawdah-abdel-rahman/" target="_blank" aria-label="LinkedIn Profile">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Icon">
+                </a>
+                <a href="https://github.com/Amawawdeh" target="_blank" aria-label="GitHub Profile">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
+                </a>
+            </div>
+            <a href="https://github.com/Amawawdeh/Amawawdeh.github.io/raw/main/Abdel%20Rahman,%20Resume.docx" class="download-button" download>
+                Download Resume
             </a>
-        </p>
+        </div>
     </header>
-    <div class="container">
-        <div class="card">
-            <h2>Professional Summary</h2>
-            <p class="typewriter-card">Civil Engineering PhD candidate with expertise in geotechnical engineering, machine learning, and remote sensing. Experienced in data analysis, programming, and structural design. Committed to advancing groundwater prediction, hydrological modeling, and sustainable engineering solutions.</p>
-        </div>
+    
+    <main>
+        <section id="professional-summary" class="section">
+            <div class="container">
+                <h2>Professional Summary</h2>
+                <p>Civil Engineering PhD candidate with expertise in geotechnical engineering, machine learning, and remote sensing. Experienced in data analysis, programming, and structural design. Committed to advancing groundwater prediction, hydrological modeling, and sustainable engineering solutions.</p>
+            </div>
+        </section>
 
-        <div class="card">
-            <h2>Work Authorization</h2>
-            <p>Authorized to work in the US</p>
-        </div>
+        <section id="work-authorization" class="section bg-light">
+            <div class="container">
+                <h2>Work Authorization</h2>
+                <p>Authorized to work in the United States.</p>
+            </div>
+        </section>
 
-        <div class="timeline">
-            <div class="timeline-item">
+        <section id="education" class="section">
+            <div class="container">
                 <h2>Education</h2>
-                <div>
-                    <p class="degree typewriter-card">PhD in Civil Engineering (Candidate, expected December 2024)</p>
-                    <p class="university typewriter-card">University of Mississippi, Oxford, MS</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>PhD in Civil Engineering <span>(Expected December 2024)</span></h3>
+                        <p class="institution">University of Mississippi, Oxford, MS</p>
+                        <p>Specialization in geotechnical engineering and machine learning applications in civil engineering.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Master of Engineering, Civil Engineering <span>(July 2020)</span></h3>
+                        <p class="institution">University of the Pacific, Stockton, CA</p>
+                        <p>Thesis focused on advanced structural analysis.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Bachelor of Science, Civil Engineering <span>(August 2018)</span></h3>
+                        <p class="institution">Jordan University of Science and Technology, Jordan</p>
+                        <p>Graduated with honors, emphasizing structural design.</p>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div>
-                    <p class="degree typewriter-card">Master of Engineering, Civil Engineering (July 2020)</p>
-                    <p class="university typewriter-card">University of the Pacific, Stockton, CA</p>
+        </section>
+
+        <section id="work-experience" class="section bg-light">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="experience">
+                    <div class="experience-item">
+                        <h3>Teaching/Research Assistant</h3>
+                        <p class="company">University of Mississippi, Oxford, MS <span>| January 2021 - Present</span></p>
+                        <ul>
+                            <li>Conduct research on groundwater prediction using machine learning and remote sensing techniques.</li>
+                            <li>Assist in teaching civil engineering courses, receiving positive feedback from students and faculty.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Civil Engineer</h3>
+                        <p class="company">Shatec Engineering Consultants, LLC, CA <span>| October 2020 - January 2021</span></p>
+                        <ul>
+                            <li>Performed seepage analysis using SEEP/W software, reducing water leakage by 15%.</li>
+                            <li>Conducted soil settlement analysis and submitted detailed reports.</li>
+                            <li>Generated predictive reports for peak temperatures in concrete piling using advanced software.</li>
+                            <li>Evaluated traffic accidents to contribute to safer road designs.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Civil Engineer, Intern</h3>
+                        <p class="company">LEEWAN Company, Irbid, Jordan <span>| June 2018 - August 2018</span></p>
+                        <ul>
+                            <li>Evaluated site engineering plans and ensured field implementation by comparing engineering plans with completed work.</li>
+                            <li>Supervised field work by daily directing staff.</li>
+                            <li>Wrote weekly detailed progress reports.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div>
-                    <p class="degree typewriter-card">Bachelor of Science, Civil Engineering (August 2018)</p>
-                    <p class="university typewriter-card">Jordan University of Science and Technology, Jordan</p>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Skills and Certifications</h2>
+                <div class="skills">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Python (Xarray, Pandas)</li>
+                            <li>TensorFlow</li>
+                            <li>MATLAB</li>
+                            <li>GIS</li>
+                            <li>AutoCAD</li>
+                            <li>REVIT</li>
+                            <li>SAP2000</li>
+                            <li>ETABS</li>
+                            <li>PROKON</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Professional Skills</h3>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Artificial Neural Networks</li>
+                            <li>Statistical Inference</li>
+                            <li>Data Analysis</li>
+                            <li>Remote Sensing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>English (Fluent)</li>
+                            <li>Arabic (Native)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Certifications</h3>
+                        <ul>
+                            <li>Fundamentals of Engineering (FE) Exam - Passed September 2023</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Work Experience</h2>
-            <div>
-                <p class="job-title typewriter-card">Teaching/Research Assistant</p>
-                <p class="company typewriter-card">University of Mississippi, Oxford, MS | January 2021 - Present</p>
-                <ul>
-                    <li class="typewriter-card">Contributed to research projects focused on groundwater prediction and remote sensing.</li>
-                    <li class="typewriter-card">Helped in some civil engineering courses, receiving positive student and professors feedback.</li>
-                </ul>
+        <section id="publications" class="section bg-light">
+            <div class="container">
+                <h2>Publications and Presentations</h2>
+                <div class="publications">
+                    <h3>Publications</h3>
+                    <ul>
+                        <li>
+                            Alshannaq, A. A., &amp; Awawdeh, A. R. (2024). "<a href="https://doi.org/10.1061/JCCOF2/CCENG-4483" target="_blank">Implementation of machine learning in predicting pin-bearing strength of aged and non-aged pultruded GFRP composites</a>." <em>Journal of Composites for Construction</em>, 28(3). https://doi.org/10.1061/JCCOF2/CCENG-4483
+                        </li>
+                        <li>
+                            Ghaffari, Z., Easson, G., Yarbrough, L. D., Awawdeh, A. R., Jahan, M. N., &amp; Ellepola, A. (2023). "<a href="https://doi.org/10.3390/s23146428" target="_blank">Using downscaled GRACE mascon data to assess total water storage in Mississippi Alluvial Plain aquifer</a>." <em>Sensors</em>, 23(14), 6428. https://doi.org/10.3390/s23146428
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="presentations">
+                    <h3>Presentations</h3>
+                    <ul>
+                        <li>"Advancing Groundwater Prediction in the Mississippi Delta: Integrating Downscaled GRACE Data and Artificial Neural Networks" - AGU Fall Meeting, San Francisco, CA, December 2023</li>
+                        <li>"Scaling Down GRACE Data for Smaller Regions" - Mississippi Water Resources Conference, Starkville, MS, March 2023</li>
+                        <li>"Downscaling GRACE Equivalent Water Thickness Data for Mississippi Using Neural Nets" - Mississippi Water Resources Conference, Starkville, MS, April 2022</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <p class="job-title typewriter-card">Civil Engineer</p>
-                <p class="company typewriter-card">Shatec Engineering Consultants, LLC, CA, USA | October 2020 - January 2021</p>
-                <ul>
-                    <li class="typewriter-card">Performed seepage analysis using SEEP/W software, leading to a 15% reduction in water leakage.</li>
-                    <li class="typewriter-card">Conducted soil settlement analysis, and submitted a detailed report.</li>
-                    <li class="typewriter-card">Generated predictive reports for peak temperatures in cast-in-place concrete piling using advanced software.</li>
-                    <li class="typewriter-card">Evaluated traffic accidents from an engineering perspective, contributing to safer road designs.</li>
-                </ul>
-            </div>
-            <div>
-                <p class="job-title typewriter-card">Civil Engineer, Intern</p>
-                <p class="company typewriter-card">LEEWAN Company, Irbid, Jordan | June 2018 - August 2018</p>
-                <ul>
-                    <li class="typewriter-card">Evaluated site engineering plans and ensured field implementation by comparing engineering plans with completed work.</li>
-                    <li class="typewriter-card">Supervised field work by daily directing staff for what to do with work.</li>
-                    <li class="typewriter-card">Wrote weekly detailed progress reports for what had been done.</li>
-                </ul>
-            </div>
-        </div>
+        </section>
+    </main>
 
-        <div class="card">
-            <h2>Skills and Certifications</h2>
-            <ul class="skills-list">
-                <li>Python (Xarray, Pandas)</li>
-                <li>TensorFlow</li>
-                <li>MATLAB</li>
-                <li>GIS</li>
-                <li>AutoCAD</li>
-                <li>REVIT</li>
-                <li>SAP2000</li>
-                <li>ETABS</li>
-                <li>PROKON</li>
-                <li>Machine Learning</li>
-                <li>ANN</li>
-                <li>Statistical Inference</li>
-                <li>Data Analysis</li>
-                <li>Remote Sensing</li>
-            </ul>
-            <p><strong>Languages:</strong> English, Arabic</p>
-            <p><strong>Certifications:</strong> EIT certification, since September 2023</p>
+    <footer class="section">
+        <div class="container">
+            <p>&copy; 2024 Abdel Rahman Awawdeh. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="card">
-            <h2>Publications and Presentations</h2>
-            <ol>
-                <li class="typewriter-card">
-                    Ghaffari Z, Easson G, Yarbrough LD, Awawdeh AR, Jahan MN, Ellepola A. 
-                    <a href="https://doi.org/10.3390/s23146428" target="_blank">
-                        Using Downscaled GRACE Mascon Data to Assess Total Water Storage in Mississippi Alluvial Plain Aquifer. Sensors. 2023; 23(14):6428.
-                    </a>
-                </li>
-                <li class="typewriter-card">
-                    Alshannaq AA, Awawdeh AR. 
-                    <a href="https://ascelibrary.org/doi/10.1061/JCCOF2.CCENG-4483" target="_blank">
-                        Implementation of Machine Learning in Predicting Pin-Bearing Strength of Aged and Non-Aged Pultruded GFRP Composites. Journal of Composites for Construction. 
-                    </a>
-                </li>
-            </ol>
-            <ul>
-                <li class="typewriter-card">"Advancing Groundwater Prediction in the Mississippi Delta: Integrating Downscaled GRACE Data and Artificial Neural Networks" - AGU Fall Meeting, San Francisco, CA, December 2023</li>
-                <li class="typewriter-card">"Scaling down GRACE data for smaller regions" - Mississippi Water Resources Conference, Starkville, MS, March 2023</li>
-                <li class="typewriter-card">"Downscaling GRACE Equivalent Water Thickness Data for Mississippi Using Neural Nets" - Mississippi Water Resources Conference, Starkville, MS, April 2022</li>
-            </ul>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script>
-        window.onload = function() {
-            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-                gsap.registerPlugin(ScrollTrigger);
-
-                gsap.from("header", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
-
-                gsap.utils.toArray(".card").forEach((card, i) => {
-                    gsap.from(card, {
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top bottom-=100",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 0,
-                        y: 50,
-                        duration: 0.8,
-                        ease: "power3.out",
-                        delay: i * 0.1
-                    });
-                });
-
-                gsap.utils.toArray(".timeline-item").forEach((item, i) => {
-                    gsap.from(item, {
-                        scrollTrigger: {
-                            trigger: item,
-                            start: "top bottom-=100",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 0,
-                        x: i % 2 === 0 ? -50 : 50,
-                        duration: 0.8,
-                        ease: "power3.out"
-                    });
-                });
-
-                gsap.utils.toArray(".skills-list li").forEach((skill, i) => {
-                    gsap.from(skill, {
-                        scrollTrigger: {
-                            trigger: ".skills-list",
-                            start: "top bottom-=100",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 0,
-                        scale: 0.5,
-                        duration: 0.5,
-                        ease: "back.out(1.7)",
-                        delay: i * 0.05
-                    });
-                });
-            } else {
-                console.error('GSAP or ScrollTrigger is not loaded correctly.');
-            }
-
-            // Typewriter effect for the subtitle
-            const typewriterElement = document.getElementById('typewriter');
-            if (typewriterElement && typeof Typewriter !== 'undefined') {
-                const typewriter = new Typewriter(typewriterElement, {
-                    loop: true,
-                    delay: 75,
-                });
-
-                typewriter
-                    .typeString('Civil Engineering PhD Candidate ')
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString('Machine Learning Enthusiast')
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString('Geotechnical Engineering Specialist')
-                    .pauseFor(1000)
-                    .start();
-            } else {
-                console.error('Typewriter effect is not loaded correctly.');
-            }
-        };
+        // JavaScript code can be added here if necessary
+        // For example, initializing any libraries or adding interactive functionality
     </script>
 </body>
 </html>
